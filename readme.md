@@ -1,13 +1,10 @@
 Shape Up Or Shape Out
+
 The purpose of this lab is to help solidify the OOP Class inheritance concepts you've learned from the lectures.
 
-You will be building a webpage that will enable users to draw shapes of varying sizes on the screen
-When a shape is clicked, you should update the sidepanel with the metrics for that shape
-Each type of shape will have its own input box(es) for getting size information, and an insert button for drawing the shape on the page
-Steps
-Setup
 Create an index.html file, script.js file, and a css file for styling
 You can optionally use Bootstrap to also add style to your webpage
+
 HTML Objectives
 Your shape painter should handle four shapes: Square, Rectangle, Circle, and Triangle
 In your index.html, go ahead and add labeled input fields and insert buttons for each shape type:
@@ -24,6 +21,7 @@ Height:
 Radius:
 Area:
 Perimeter:
+
 JavaScript Objectives
 You must use OOP. Specifically, you must use the classes defined below and properly use inheritance
 Class- Shape
@@ -56,6 +54,7 @@ To keep things simple, it helps to think of every shape having a width and heigh
 Remember that a circle's perimeter is the same as its circumference
 Drawing a triangle is going to be tricky!
 Circles should be purple, Squares should be red, Triangles should be yellow, and Rectangles should be green
+
 Hints/Resources
 Try to use CSS class names and write as many styles onto those class names as you can
 Only use inline-styles when necessary (and some things will require it in this lab)
