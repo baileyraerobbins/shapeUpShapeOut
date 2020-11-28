@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape Up or Shape Out</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container shadow-lg p-4 mb-5 bg-gray rounded border border-dark" id="shapeInputs">
+        <h1>Add a Shape</h1>
+        <h6>Choose the size of your shape (between 1px and 200px) to add it to the box below.</h6>
+
+        <div class="row">
+            <div class="input-group mb-3" id="recInput">
+                <input type="text" class="form-control" id="recWidth" placeholder="width px" aria-label="width px"
+                    aria-describedby="button-addon2">
+                <input type="text" class="form-control" id="recHeight" placeholder="height px" aria-label="height px"
+                    aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="recBtn">Add Rectangle</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-group mb-3" id="sqInput">
+                <input type="text" class="form-control" id="sqLength" placeholder="side length px"
+                    aria-label="side length px" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="sqBtn">Add Square</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-group mb-3" id="circInput">
+                <input type="text" class="form-control" id="circRadius" placeholder="radius px" aria-label="radius px"
+                    aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="circBtn">Add Circle</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-group mb-3" id="isocelesInput">
+                <input type="text" class="form-control" id="isocelesheight" placeholder="height px"
+                    aria-label="height px" aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" id="triBtn">Add Triangle</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container" id="newContainer">
+        <div class="row">
+            <div class="col">
+                <div class="whiteBox" id="whiteBox"></div>
+            </div>
+            <div class="col">
+                <div class="sidePanel" id="sidePanel">
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Shape:</span>
+                        </div>
+                        <input type="text" class="form-control" id="panelShape" placeholder="" aria-label=""
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Width</span>
+                        </div>
+                        <input type="text" class="form-control" id="panelWidth" placeholder="" aria-label=""
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Height</span>
+                        </div>
+                        <input type="text" class="form-control" id="panelHeight" placeholder="" aria-label=""
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Radius</span>
+                        </div>
+                        <input type="text" class="form-control" id="panelRadius" placeholder="" aria-label=""
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Area</span>
+                        </div>
+                        <input type="text" class="form-control" id="panelArea" placeholder="" aria-label=""
+                            aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1">Perimeter</span>
+                        </div>
+                        <input type="text" class="form-control" id="panelPerimeter" placeholder="" aria-label=""
+                            aria-describedby="basic-addon1">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
