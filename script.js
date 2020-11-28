@@ -111,7 +111,7 @@ class Circle extends Shape {
         shapeHeight.value = 'N/A';
         shapeRadius.value = this.width;
         shapeArea.value = Math.PI * Math.pow(this.width, 2);
-        shapePerimeter.value = 2 * Math.PI * this.wdith;
+        shapePerimeter.value = 2 * Math.PI * this.height;
     }
 }
 
