@@ -23,14 +23,10 @@ let shapeRadius = document.getElementById('panelRadius');
 let shapeArea = document.getElementById('panelArea');
 let shapePerimeter = document.getElementById('panelPerimeter');
 
-recBtn.addEventListener('click', () => new Rectangle(recHeight.value, recWidth.value)) //on rectangle button click, add rectangle to box
+recBtn.addEventListener('click', () => new Rectangle(recWidth.value, recHeight.value)) //on rectangle button click, add rectangle to box
 sqBtn.addEventListener('click', () => new Square(sqLength.value)); //on square button click, add square to box
 cirBtn.addEventListener('click', () => new Circle(circRadius.value)); //on circle button click, add circle to box
 triBtn.addEventListener('click', () => new Triangle(triheight.value)); //on triangle button click, add triangle to box
-
-function randomVal(min, max) { //generate a random value so shapes appear randomly in box
-    return Math.floor(Math.random() * (max - min));
-}
 
 class Shape {
     constructor(width, height) { //every shape needs a width and height!
@@ -44,9 +40,7 @@ class Shape {
 
     addShape() { // add all shapes to black box 
         if ( // if any size input is larger than 200px, alert to reset number
-            this.width > shapeMax && this.height > shapeMax ||
-            this.width > shapeMax ||
-            this.height > shapeMax
+            this.width > shapeMax || this.height > shapeMax
         ) {
             return alert('This is too big. You need to change the size of your shape to 200px or below.');
         }
@@ -56,9 +50,14 @@ class Shape {
         this.div.style.height = `${this.height}px`;
 
     }
+
+    randomVal(min, max) { //generate a random value so shapes appear randomly in box
+        return Math.floor(Math.random() * (max - min));
+    }
+
     updateLocation() { //update shape location in box
-        let xVal = randomVal(0, MAX); //set x coord
-        let yVal = randomVal(0, MAX); //set y coord
+        let xVal = this.randomVal(0, MAX); //set x coord
+        let yVal = this.randomVal(0, MAX); //set y coord
         this.div.style.left = `${xVal}px`; //determine x px in box
         this.div.style.top = `${yVal}px`; //determine y px in box
     }
@@ -79,7 +78,7 @@ class Rectangle extends Shape {
         shapeHeight.value = this.height;
         shapeRadius.value = 'N/A';
         shapeArea.value = this.width * this.height;
-        shapePerimeter.value = this.width * 2 + this.height * 2;
+        shapePerimeter.value = (this.width * 2) + (this.height * 2);
     }
 }
 
@@ -90,7 +89,7 @@ class Square extends Shape {
         this.addShape(); //add shape
     }
     describe() { //get values from square width & height and update to side panel stats
-        shapeName.value = 'Sqaure';
+        shapeName.value = 'Square';
         shapeWidth.value = this.width;
         shapeHeight.value = this.height;
         shapeRadius.value = 'N/A';
@@ -107,9 +106,9 @@ class Circle extends Shape {
     }
     describe() { //get values from circle width and update side panel stats
         shapeName.value = 'Circle';
-        shapeWidth.value = 'N/A';
-        shapeHeight.value = 'N/A';
-        shapeRadius.value = this.width;
+        shapeWidth.value = this.width;
+        shapeHeight.value = this.width;
+        shapeRadius.value = (this.width / 2);
         shapeArea.value = Math.PI * Math.pow(this.width, 2);
         shapePerimeter.value = 2 * Math.PI * this.height;
     }
